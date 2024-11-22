@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
+
+    <!-- ConstraintLayout envuelto dentro del ScrollView -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="231dp"
+            android:layout_height="232dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/usericonbig"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/perfilNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Nombre: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/perfilCorreo"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Correo: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilNombre" />
+
+        <TextView
+            android:id="@+id/perfilCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Cantidad de productos: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilCorreo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botonEliminarCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_rounded_red"
+            android:text="Eliminar cuenta"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilBotonGuardar" />
+
+        <TextView
+            android:id="@+id/perfilHoraInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Hora de inicio: "
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilCantidad" />
+
+        <TextView
+            android:id="@+id/perfilHoraTermino"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Hora de término: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilHoraInicio" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/perfilBotonGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_rounded"
+            android:text="Guardar cambios"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilValueHoraTermino" />
+
+        <EditText
+            android:id="@+id/perfilValueHoraInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:ems="10"
+            android:inputType="time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilCantidad" />
+
+        <EditText
+            android:id="@+id/perfilValueHoraTermino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:ems="10"
+            android:inputType="time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/perfilValueHoraInicio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:padding="20dp"
+        >
+
+
+        <EditText
+            android:id="@+id/agregarNombreProducto"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/primaryColor"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Nombre del producto"
+            android:inputType="text"
+            android:textColorHint="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/agregarPrecioProducto"
+            android:backgroundTint="@color/primaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Precio"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarNombreProducto" />
+
+        <EditText
+            android:id="@+id/agregarCantidadInicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Cantidad inicial"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primaryColor"
+            android:textColorHint="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarPrecioProducto" />
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/agregarMapView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/black"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerMapa" />
+
+        <Spinner
+            android:id="@+id/spinnerMapa"
+            android:layout_width="213dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarCantidadInicial"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/agregarBoton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_rounded"
+            android:text="Agregar"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarLongitud" />
+
+        <TextView
+            android:id="@+id/agregarLatitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarMapView" />
+
+        <TextView
+            android:id="@+id/agregarLongitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/agregarLatitud" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
